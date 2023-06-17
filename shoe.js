@@ -2,27 +2,35 @@
 
 alert('Warning Shoe Lovers Only!!! ');
 
-let userName = prompt ('What is your nickname ');
-let favoriteShoe = prompt('What is your favorite shoe? ');
-console.log('Whats Good!!!! ' + userName);
-document.write('Whats Good!!!! ' + userName);
-
-let shoeJordanNumber = prompt('What is your favorite pair of jordans or favorite sneaker? ');
-console.log(typeof(shoeJordanNumber));
-
-let message;
-
-if (shoeJordanNumber < 13) {
-    message = 'You got Steeze ';
-} else if  (shoeJordanNumber > 13){
-    message = 'Thats cool ';
-} else if (shoeJordanNumber <= 8){
-       message= 'These are the Best of the Best!!! ';
-}    else { 
-message = 'All Styles of shoewear is accepted here !!!! '
+function TheUsersName() {
+    let usersName = prompt('What is your nickname ');
+    if (usersName == '') {
+        TheUsersName();
+    }
+    console.log('Whats Good !!!! ' + usersName);
+    return document.write('Whats Good !!!! ' + usersName);
 }
 
-console.log(typeof(message));
+function shoeJordanNumber() {
+    let shoeJordanNumber = prompt('What is your favorite pair of Jordans ');
+    let message;
+    if(shoeJordanNumber == '') {
+        shoeJordanNumber();
+    }
+    else if (shoeJordanNumber < 13) {
+        message = 'You got that heat!!! ';
+    }
+    else if (shoeJordanNumber > 13) {
+        message = 'I see ya !! '; 
+    }
+    else if (shoeJordanNumber <= 8) {
+        message = 'These are the ones !!! ';
+    }
+    else {
+        message = 'All Styles of shoes are accepted here !!! ';
+        }
+        console.log(message);
+        return document.write(message);
+}
 
-console.log(message);
-document.write(message);
+
